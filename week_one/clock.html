@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Clock App</title>
+    </head>
+    <body>
+        <div id="root">
+        </div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.js'></script>
+        <script src='https://unpkg.com/babel-standalone@6/babel.min.js'></script>
+        <script type="text/babel">
+            const tick = ()=>{
+                const time = (
+                    <div>
+                    <h1>Hello World!!!</h1>
+                    <p className="time">It is {new Date().toLocaleTimeString()}</p>
+                    </div>
+                )
+                ReactDOM.render(
+                    time,
+                    document.getElementById('root')
+                );
+            }
+
+            setInterval(tick, 1000);
+        </script>
+    </body>
+</html>
+ 
